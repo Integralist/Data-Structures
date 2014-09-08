@@ -96,7 +96,7 @@ Reference: [http://en.wikipedia.org/wiki/Dynamic_array#Performance](http://en.wi
 ### Notes
 
 There is a mathematic variant of the Array called a [Vector](http://en.wikipedia.org/wiki/Vector_space) 
-and you may be confused as to its use in the (Clojure programming language)[http://clojure.org/data_structures#Data Structures-Vectors (IPersistentVector)] but in practical 
+and you may be confused as to its use in the [Clojure programming language](http://clojure.org/data_structures#Data%20Structures-Vectors%20\(IPersistentVector\)) but in practical 
 terms they are implemented as a Dynamic Array data structure.
 
 ---
