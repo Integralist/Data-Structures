@@ -277,6 +277,12 @@ A Dictionary is simply a collection of key-value pairs. Any time we wish to
 retrieve content from the Dictionary we use the "key" to search for the content. 
 When the key is found, the associated "value" is returned.
 
+> Note: Dictionaries are often referred to as a `Map`  
+and in some languages as a `Hash` (although that  
+terminology gets confusing when considering the  
+`Hash Table` data structure). Dictionary is likely  
+the best term to use for this type of key/value structure
+
 The following is an example of a basic Dictionary lookup in Ruby:
 
 ```ruby
