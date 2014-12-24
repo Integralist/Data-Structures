@@ -87,6 +87,7 @@ Reference: [http://en.wikipedia.org/wiki/Dynamic_array#Performance](http://en.wi
 #### Pros
 
 - Faster lookups (due to index access, rather than looping entire data structure)
+  - This is possible due to the underlying implementation being a Hash Table
 - Inserting/deleting elements at the end of the Array (due to index access)
 
 #### Cons
@@ -98,6 +99,8 @@ Reference: [http://en.wikipedia.org/wiki/Dynamic_array#Performance](http://en.wi
 There is a mathematic variant of the Array called a [Vector](http://en.wikipedia.org/wiki/Vector_space) 
 and you may be confused as to its use in the [Clojure programming language](http://clojure.org/data_structures#Data%20Structures-Vectors%20\(IPersistentVector\)) but in practical 
 terms they are implemented as a Dynamic Array data structure.
+
+I've not provided an implementation of the Array as it already exists as part of the Ruby language
 
 ---
 
@@ -121,11 +124,13 @@ Linked List, where by the last node's pointer will point to `null` (to indicate
 the end of the list). But there is also a "doubly" Linked List which allows each 
 node's pointer to point to the *previous* node (not just point to the following node).
 
-> Note: the following API is based on the "doubly" Linked List
+> Note: the following API is based on the "singly" Linked List
 
 There are also "circularly" Linked Lists which simply loop around and around the 
 data structure (i.e. when it reaches the last node, the pointer will point 
 to the starting node and vice-versa for the first node moving backwards).
+
+When inserting items, for performance, new items are inserted before the node at the head
 
 ### API
 
@@ -133,13 +138,11 @@ to the starting node and vice-versa for the first node moving backwards).
 - `remove` (remove element at specified index)
 - `clear` (remove all elements from the list, leaving an empty list)
 - `next` (move to next item in the list)
-- `prev` (move to previous item in the list)
 - `move_to` (move to specified index)
 - `position` (returns the current index position)
 - `get` (returns the element at the specified index)
 - `front` (change index position to be the starting position)
 - `end` (change index position to be the ending position)
-- `prev?` (returns Boolean value checking if a previous index exists)
 - `next?` (returns Boolean value checking if a next index exists)
 
 ### Properties
